@@ -19,4 +19,6 @@ react_client_app> npm install
 2. Run this application using below command <br>
 react_client_app> node index.js
 
-
+Testing sample application
+By default sample application runs on 3000 port. You can access this application using http://IP:3000 <br>
+To test any specific API you can use any 3rd party REST API client to verify the APIs
