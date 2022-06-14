@@ -11,7 +11,7 @@ The index.js file in this repository demonstrates the use of "engage-call-api-js
 Note:
 Kindly refer to API spec under API & SDK section of enagage portal or contact your service provider for more details on API parameters
 
-Running the Sample inde.js
+Running the Sample index.js<br>
 =================================================<br>
 Steps to run this application:
 1. Install the npm packages by run below commands in terminal:<br>
