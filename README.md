@@ -7,6 +7,8 @@ The index.js file in this repository demonstrates the use of "engage-call-api-js
 1) makeCall
 2) getCallRecordByCallId
 3) getMultipleCallRecords
+4) updateCallRecordByCallIdPutMethod
+5) updateCallRecordByCallIdPostMethod
 
 Note:
 Kindly refer to API spec under API & SDK section of enagage portal or contact your service provider for more details on API parameters

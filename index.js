@@ -72,3 +72,53 @@ app.get("/getCallRecords", function (req, res) {
       res.send(error);
     });
 });
+
+app.put("/updatecall", function (req, res) {
+  console.log("check")
+  CallApi.CallService.updateCallRecordByCallIdPutMethod(
+    "AC-4cf92d2a-b9ce-4da4-a05e-66239504e5ab",
+    "<<Call_Id>>"
+    {
+      Url: "http://www.example.com/application.xml", //If this URL is specified, you should not include Eml or ApplicationID parameter in the same REST API request, otherwise an error will be returned
+      Method: "POST", 
+      Eml: "<<Inline-EML>>", //If inline EML is specified, you should not include Url or ApplicationID parameter in the same REST API request, otherwise an error will be returned.
+      ApplicationID: "<<VDT_ID>>", //If an application ID is specified here, you should not include Url or Eml parameter in the same REST API request, otherwise an error will be returned.
+      Status: "Terminated",
+      StatusCallback: "http://www.example.com/event",
+      StatusCallbackMethod: "POST",
+      StatusCallbackEvent: "initiated, ringing, answered, completed",
+    }
+  )
+    .then(function (response) {
+      res.status = 200;
+      res.send(response);
+    })
+    .catch(function (error) {
+      res.send(error);
+    });
+});
+
+app.post("/updatecall", function (req, res) {
+  console.log("check")
+  CallApi.CallService.updateCallRecordByCallIdPostMethod(
+    "AC-4cf92d2a-b9ce-4da4-a05e-66239504e5ab",
+    "<<Call_Id>>"
+    {
+      Url: "http://www.example.com/application.xml", //If this URL is specified, you should not include Eml or ApplicationID parameter in the same REST API request, otherwise an error will be returned
+      Method: "POST", 
+      Eml: "<<Inline-EML>>", //If inline EML is specified, you should not include Url or ApplicationID parameter in the same REST API request, otherwise an error will be returned.
+      ApplicationID: "<<VDT_ID>>", //If an application ID is specified here, you should not include Url or Eml parameter in the same REST API request, otherwise an error will be returned.
+      Status: "Terminated",
+      StatusCallback: "http://www.example.com/event",
+      StatusCallbackMethod: "POST",
+      StatusCallbackEvent: "initiated, ringing, answered, completed",
+    }
+  )
+    .then(function (response) {
+      res.status = 200;
+      res.send(response);
+    })
+    .catch(function (error) {
+      res.send(error);
+    });
+});
